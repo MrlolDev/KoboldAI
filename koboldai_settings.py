@@ -1365,7 +1365,7 @@ class system_settings(settings):
                                     api_key = self._koboldai_var.horde_api_key
                                     priority_usernames = []
                                 # Always use the local URL & port
-                                kai_url = f'http://127.0.0.1:{self.port}'
+                                kai_url = f'http://0.0.0.0:{self.port}'
 
                                 logger.info(f"Name: {kai_name} on {kai_url}")
                                 threading.Thread(target=self._horde_pid.bridge, args=(1, api_key, kai_name, kai_url, cluster_url, priority_usernames)).run()
